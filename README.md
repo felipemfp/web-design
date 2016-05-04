@@ -1,4 +1,4 @@
-# Exercicios de Web Design
+# Exercícios de Web Design
 
 **Instituição**: Instituto Federal do Rio Grande do Norte
 
