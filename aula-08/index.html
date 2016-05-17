@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>16 de maio de 2016 - Web Design</title>
+        <style>
+            input,
+            label,
+            select {
+                display: block;
+            }
+
+            textarea {
+                max-width: 640px;
+            }
+
+            input[type=checkbox],
+            input[type=radio],
+            input[type=reset],
+            input[type=submit] {
+                display: inline;
+            }
+        </style>
+    </head>
+    <body>
+        <main style="max-width: 720px; margin: 0 auto">
+            <h1>Pesquisa Eleitoral</h1>
+            <form action="resultado.html" method="post">
+                <fieldset>
+                    <legend>Sobre você</legend>
+                    <label>Nome</label>
+                    <input type="text" name="nome" placeholder="Informe seu nome"/>
+                    <br/>
+                    <label>Matrícula</label>
+                    <input type="text" name="matrícula" placeholder="Informe sua matrícula"/>
+                    <br/>
+                    <label>Senha do SUAP</label>
+                    <input type="password" name="senha" placeholder="Informe sua senha"/>
+                    <br/>
+                    <label>Turma</label>
+                    <select name="turma">
+                        <option disabled="" selected="">Selecione</option>
+                        <optgroup label="DIATINF">
+                            <option>TADS 2016.1</option>
+                            <option>REDES 2016.1</option>
+                            <option>GESTÃO 2016.1</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Intenção de voto</legend>
+                    <label>Líder de Sala</label>
+                    <label><input type="radio" name="lider" value="João">
+                        João</label>
+                    <label><input type="radio" name="lider" value="Maria">
+                        Maria</label>
+                    <label><input type="radio" name="lider" value="Antônio">
+                        Antônio</label>
+                    <br/>
+                    <label>Vice-Líder de Sala</label>
+                    <label><input type="radio" name="vice-lider" value="Carlos">
+                        Carlos</label>
+                    <label><input type="radio" name="vice-lider" value="Mônica">
+                        Mônica</label>
+                    <label><input type="radio" name="vice-lider" value="Luiza">
+                        Luiza</label>
+                    <br/>
+                    <label>Conselho de Sala</label>
+                    <label><input type="checkbox" name="conselho-paulo">
+                        Paulo</label>
+                    <label><input type="checkbox" name="conselho-cesar">
+                        César</label>
+                    <label><input type="checkbox" name="conselho-janaina">
+                        Janaína</label>
+                    <label><input type="checkbox" name="conselho-jorge">
+                        Jorge</label>
+                    <label><input type="checkbox" name="conselho-ester">
+                        Ester</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Sobre a votação</legend>
+                    <label>Justificativa</label>
+                    <textarea name="justificativa" rows="3" cols="60"></textarea>
+                    <br/>
+                    <label>Se preferir, anexe o documento com sua justificativa</label>
+                    <input type="file" name="documento" accept="application/pdf"/>
+                </fieldset>
+                <br />
+                <input type="reset" name="cancelar" value="Cancelar"/>
+                <input type="submit" name="enviar" value="Enviar"/>
+            </form>
+        </main>
+    </body>
+</html>
