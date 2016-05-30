@@ -1,4 +1,4 @@
-# Faça um currículo pessoal em HTML
+### Faça um currículo pessoal em HTML
 
 - Coloque seu nome e dados pessoais gerais (nº de documentos, endereço, telefone, e-mail, etc.)
 
