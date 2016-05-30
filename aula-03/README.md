@@ -1,6 +1,4 @@
 ### Faça uma página HTML sobre seu bairro
-- Na página inicial, mostre a apresentação do dicionário, e links para as letras
-A, B e C.
 
 - O nome do bairro e informações básicas
 
