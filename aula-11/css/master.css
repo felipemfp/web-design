@@ -1,0 +1,71 @@
+html, body {
+  box-sizing: border-box;
+  font-family: 'Ubuntu', 'Calibri', sans-serif;
+  background: #76b852;
+  background: -webkit-linear-gradient(to left, #76b852, #8DC26F);
+  background: linear-gradient(to left, #76b852, #8DC26F);
+  color: #fff;
+}
+header, main, footer {
+  max-width: 920px;
+  margin: 0 auto;
+}
+footer {
+  margin: 2em auto;
+}
+footer h4 {
+  font-style: normal;
+  font-weight: 300;
+}
+ul, ol {
+  list-style-type: none;
+  padding: inherit;
+}
+ul.with-circle, ol.with-circle {
+  list-style-type: circle;
+}
+.padding-left-3 {
+  padding-left: 3em;
+}
+a {
+  text-decoration: none;
+  border-bottom: 1px dotted #fff;
+}
+a:after {
+  content: '\02197';
+}
+a, a:visited {
+  color: inherit;
+}
+h1 > img {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+}
+.red {
+  color: #f30000;
+}
+.pull-right {
+  float: right;
+  text-align: right;
+}
+article p {
+  text-align: justify;
+}
+section#publicacoes li {
+  margin: 0.75em auto;
+}
+.centered {
+  text-align: center;
+}
+nav .ativo {
+  font-size: 1em;
+  font-weight: 600;
+}
+nav a:after {
+  content: '';
+}
+article b {
+  font-size: 1.2em;
+  color: #B4FFC8;
+}
