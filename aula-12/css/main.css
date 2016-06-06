@@ -1,0 +1,129 @@
+html, body {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  font-weight: 200;
+}
+
+body {
+ max-width: 1024px;
+ margin: 0 auto;
+}
+
+header h1 {
+  float: left;
+}
+
+header nav {
+  text-align: right;
+  padding-top: 2em;
+}
+
+header nav a {
+  border: 1px solid #ccc;
+  padding: .75em 2em;
+  text-transform: lowercase;
+  text-decoration: none;
+  color: inherit;
+}
+
+header nav a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+  text-transform: lowercase;
+}
+
+h1::before, h2::before, h3::before {
+  content: "_";
+}
+
+main {
+  clear: both;
+}
+
+main ul {
+  list-style-type: none;
+  padding: inherit;
+  margin: 0 auto;
+  text-align: center;
+}
+
+main ul li {
+  margin: 1em 2em;
+  display: inline-block;
+}
+
+main p {
+  text-align: justify;
+}
+
+main table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+main table th {
+  text-align: left;
+}
+
+main table tr {
+  height: 2em;
+}
+
+main table tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+main form {
+  width: 100%;
+  clear: both;
+}
+
+main form label {
+  display: block;
+  margin-top: 1em;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+
+main form input {
+  height: 2em;
+  padding: 0.25em .5em;
+}
+
+main form textarea {
+  padding: 0.25em .5em;
+}
+
+main form textarea, main form input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+main form button {
+  border: 1px solid #ccc;
+  padding: .75em 2em;
+  text-transform: lowercase;
+  text-decoration: none;
+  color: inherit;
+}
+
+main form button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+footer {
+  clear: both;
+  margin-top: 2em;
+  text-align: center;
+}
+
+footer h4 {
+  font-weight: 200;
+}
+
+.pull-right {
+  float: right;
+}
