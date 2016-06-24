@@ -1,0 +1,110 @@
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', 'Helvetica', sans-serif;
+  min-height: 100%;
+  flex-direction: column;
+  display: flex;
+  box-sizing: border-box;
+}
+
+a {
+ color: white;
+}
+
+#cabecalho {
+  background: rgba(255,120,124,1);
+  color: white;
+  font-size: 2.5em;
+  padding: .5em;
+  text-align: center;
+}
+
+#menu {
+  background: rgba(255,120,124,1);
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+#menu ul li {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  padding: 1em 2em;
+  display: inline;
+  margin: 0 2em;
+  text-align: center;
+}
+
+#menu ul li a {
+  text-decoration: none;
+}
+
+#menu ul li:hover {
+  border: #f5f5f5 1px solid;
+}
+
+#menu ul li:last-child {
+  margin: 0;
+}
+#menu ul li:first-child {
+  margin: 0;
+}
+
+#conteudo {
+  width: 1024px;
+  margin: 0 auto;
+  font-size: 1.2em;
+  flex: 1;
+}
+
+#conteudo li {
+  margin: .5em;
+}
+
+
+#rodape {
+  background: rgba(255,120,124,1);
+  color: white;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 1em;
+  margin-top: 2em;
+}
+
+.foto {
+  padding: 1em;
+}
+
+.foto legend {
+  font-style: italic;
+  padding: 1em;
+}
+
+.noticia {
+  padding: 1em 0;
+  clear: both;
+}
+.noticia .texto {
+  float: left;
+  width: 70%;
+}
+.noticia img {
+  float: right;
+  width: 30%;
+}
+
+.noticia a {
+  color: white;
+  background: rgba(255,120,124,1);
+  text-decoration: none;
+  padding: .5em;
+  font-size: .8em;
+}
