@@ -1,0 +1,283 @@
+@import url(//fonts.googleapis.com/css?family=PT+Sans);
+@import url(//fonts.googleapis.com/css?family=Lobster);
+@import url(//cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css);
+
+html, body {
+  font-family: 'PT Sans', sans-serif;
+  color: #666;
+}
+
+/* IMAGE ANIMATIONS_ */
+
+img {
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+}
+
+img:hover {
+  -webkit-animation: colorize 1s; /* Chrome, Safari, Opera */
+    animation: colorize 1s;
+}
+
+@-webkit-keyframes colorize {
+  from {
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+  }
+  to {
+    -webkit-filter: grayscale(0); /* Chrome, Safari, Opera */
+    filter: grayscale(0);
+  }
+}
+
+@keyframes colorize {
+  from {
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+  }
+  to {
+    -webkit-filter: grayscale(0); /* Chrome, Safari, Opera */
+    filter: grayscale(0);
+  }
+}
+
+/* _IMAGE ANIMATIONS */
+
+/* HEADER_ */
+
+header {
+  background-color: mediumseagreen;
+  color: white;
+  padding: 1.5em;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 3em;
+}
+
+header nav {
+  margin-top: 1em;
+}
+
+header nav a {
+  text-decoration: none;
+  color: inherit;
+  padding: .2em .5em;
+}
+
+/* _HEADER */
+
+/* SECTIONS_ */
+
+section {
+  width: 90%;
+  margin: 2em auto;
+}
+
+/* banner_ */
+
+section.banner {
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(//upload.wikimedia.org/wikipedia/commons/8/8a/RioGrandedoNorte_Municip_Natal.svg) ;
+  background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(//upload.wikimedia.org/wikipedia/commons/8/8a/RioGrandedoNorte_Municip_Natal.svg) ;
+  background-image: -o-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(//upload.wikimedia.org/wikipedia/commons/8/8a/RioGrandedoNorte_Municip_Natal.svg) ;
+  background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(//upload.wikimedia.org/wikipedia/commons/8/8a/RioGrandedoNorte_Municip_Natal.svg) ;
+  background-position: center center ;
+  background-size: cover ;
+  font-size: 2em;
+  text-align: center;
+  margin: 0;
+  padding: 2em 0;
+  color: #f5f5f5;
+  width: 100%;
+}
+
+section.banner article h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 2em;
+  color: #f5f5f5;
+  margin: 2em auto .5em;
+}
+
+section.banner article p {
+  margin: .5em auto 2em;
+}
+
+/* _banner */
+
+section h2 {
+  margin-top: 5em;
+  margin-bottom: 1.5em;
+  font-family: 'Lobster', cursive;
+  color: #333;
+  font-size: 2em;
+  text-align: center;
+}
+
+/* table_ */
+
+section table {
+  width: 100%;
+  font-size: 1.3em;
+}
+
+section table th, section table td {
+  padding: 1em .3em;
+}
+
+section table th {
+  font-weight: 600;
+  text-align: right;
+}
+
+/* _table */
+
+/* FIGURES_ */
+
+figure img {
+  width: 100%;
+}
+
+figure figcaption {
+  font-size: .95em;
+}
+
+/* _FIGURES */
+
+/* gallery_ */
+
+section .images {
+  text-align: center;
+}
+
+section .images figure {
+  max-width: 100%;
+}
+
+section .images figure img {
+  margin: 1em auto;
+}
+
+section .images figure figcaption {
+  margin-bottom: 2em;
+}
+
+/* _gallery */
+
+/* news_ */
+
+section .news figure {
+  display: none;
+}
+
+section .news article {
+  margin: 1em auto;
+  clear: both;
+}
+
+section .news article h3 {
+  font-size: 1.5em;
+  margin: 1em 0;
+  color: #333;
+}
+
+section .news article p {
+  text-align: justify;
+}
+
+section .news article a {
+  font-size: 1em;
+  text-decoration: none;
+  color: inherit;
+  float: right;
+  border: 1px solid #999999;
+  padding: .5em 1.25em;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  -webkit-transition: background-color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
+}
+
+section .news article a:hover {
+  background-color: #f5f5f5;
+}
+
+/* _news */
+
+
+/* FOOTER_ */
+
+footer {
+  clear: both;
+  margin-top: 2em;
+  background-color: #0c0c0c;
+  color: #f5f5f5;
+  padding: 2em;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px dashed;
+}
+
+/* _FOOTER */
+
+@media only screen and (min-device-width : 768px) {
+
+  /* gallery_ */
+
+  section .images li {
+    display: inline;
+  }
+
+  section .images figure {
+    max-width: calc(79% / 2);
+    display: inline-block;
+    margin: 0 5%;
+  }
+
+  /* _gallery */
+
+  /* news_ */
+
+  section .news figure {
+    margin-right: 2em;
+    display: block;
+    float: left;
+    width: 10em;
+  }
+
+  section .news figure figcaption {
+    display: none;
+  }
+
+  /* _news */
+
+}
+
+@media only screen  and (min-width : 1224px) {
+
+  /* gallery_ */
+
+  section .images figure {
+    max-width: calc(69% / 3);
+    margin: 0 5%;
+  }
+
+  /* _gallery */
+
+  /* news_ */
+
+  section .news figure img {
+      margin-bottom: .5em;
+  }
+
+  section .news figure figcaption {
+    display: block;
+    margin-bottom: 2em;
+  }
+
+  /* _news */
+}
