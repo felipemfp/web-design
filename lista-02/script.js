@@ -2,12 +2,12 @@
 
 var lista2 = (function() {
   var q = [
-    function q1() {
+    function questao1() {
       var x = parseInt(prompt('Qual é o número:'));
       var y = parseInt(prompt('Diga o número para comparar:'));
       alert('O maior é: ' + (x > y ? x : y));
     },
-    function q2() {
+    function questao2() {
       var x = parseInt(prompt('Põe um número aí:'));
       if (x >= 0) {
         alert('Parece que esse valor é positivo (pelo menos é certeza que não é negativo).');
@@ -15,7 +15,7 @@ var lista2 = (function() {
         alert('Negativo! Certeza absoluta.');
       }
     },
-    function q3() {
+    function questao3() {
       var l = prompt('Diga a representação de um sexo com uma letra:');
       if (l.toUpperCase() === 'F') {
         alert('Feminino, ué!');
@@ -25,7 +25,7 @@ var lista2 = (function() {
         alert('INVÁLIDO! Conheço esse não, visse!');
       }
     },
-    function q4() {
+    function questao4() {
       var l = prompt('Diga uma letra aí:').toUpperCase();
       if (l === 'A' || l === 'E' || l === 'I' || l === 'O' || l === 'U') {
         alert('Claramente uma vogal!');
@@ -35,7 +35,7 @@ var lista2 = (function() {
         alert('Tu colocou outra coisa ali.');
       }
     },
-    function q5() {
+    function questao5() {
       var n1 = parseFloat(prompt('Diga a primeira nota:'));
       var n2 = parseFloat(prompt('Diga a segunda:'));
       var m = ((n1 * 2) + (n2 * 3)) / 5;
@@ -47,7 +47,7 @@ var lista2 = (function() {
         alert('No teu boletim vai ter: "Reprovado"!');
       }
     },
-    function q6() {
+    function questao6() {
       var n = [];
       for (var i = 0; i < 3; i++) {
         n[i] = parseInt(prompt('Coloca algum número aí:'));
@@ -62,7 +62,7 @@ var lista2 = (function() {
       }
       alert('O maiorzão é: ' + x);
     },
-    function q7() {
+    function questao7() {
       var n = [];
       for (var i = 0; i < 3; i++) {
         n[i] = parseInt(prompt('Coloca algum número aí:'));
@@ -81,7 +81,7 @@ var lista2 = (function() {
       }
       alert('O maiorzão é: ' + x + '\nO menor mesmo é: ' + y);
     },
-    function q8() {
+    function questao8() {
       var n = [];
       for (var i = 0; i < 3; i++) {
         n[i] = parseInt(prompt('Coloca o preço do produto #' + (i + 1) + ' aí:'));
@@ -96,7 +96,7 @@ var lista2 = (function() {
       }
       alert('Compre o mais barato, ou seja: produto #' + x);
     },
-    function q9() {
+    function questao9() {
       var n = [];
       for (var i = 0; i < 3; i++) {
         n[i] = parseInt(prompt('Coloca algum número aí:'));
@@ -132,7 +132,7 @@ var lista2 = (function() {
       }
       alert('Do maior ao menor: ' + o.join(', '));
     },
-    function q10() {
+    function questao10() {
       var r = {
         'M': 'Bom dia! zZzZ',
         'V': 'Boa tarde! o/',
@@ -147,7 +147,140 @@ var lista2 = (function() {
       } else {
         alert('Tá me tirando? VALOR INVÁLIDO.');
       }
-    }
+    },
+    function questao11() {
+      var s = parseFloat(prompt('Qualé o salário?'));
+      var a = 5.0;
+
+      if (s <= 280) {
+        a = 20.0;
+      } else if (s < 700) {
+        a = 15.0;
+      } else if (s < 1500) {
+        a = 10.0;
+      }
+
+      alert(
+        'Antes do aumento, o salário era: R$ ' + s +
+        '\nEntão ganhou um aumento de: ' + a + '%' +
+        '\nOu seja: R$ ' + (s * (a / 100)) +
+        '\nSendo assim, o novo salário é: R$ ' + (s + s * (a / 100))
+      );
+    },
+    function questao12() {},
+    function questao13() {
+      var o = parseInt(prompt('Digaí um número que eu digo o dia da semana'));
+      if (1 <= o && o <= 7) {
+        var d = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
+        alert('Fácil, fácil: ' + d[o - 1]);
+      } else {
+        alert('INVÁLIDO! Se não quer brincar, não brinca.');
+      }
+    },
+    function questao14() {},
+    function questao15() {
+      var l = [];
+      alert('Vou pedir três lados de um triângulo, viu?');
+      for (var i = 0; i < 3; i++) {
+        l[i] = parseFloat(prompt('Digite aí um lado do triângulo'));
+      }
+      if (l[0] < l[1] + l[2] && l[2] < l[1] + l[0] && l[1] < l[0] + l[2]) {
+        if (l[0] === l[1] && l[2] === l[1]) {
+          alert('Esse bagulho dá um equilátero!');
+        } else if (l[0] === l[1] || l[2] === l[1] || l[0] === l[2]) {
+          alert('Aposto num isósceles!');
+        } else {
+          alert('Escaleno neles!');
+        }
+      } else {
+        alert('Dá um triângulo não, visse!');
+      }
+    },
+    function questao16() {},
+    function questao17() {
+      var y = parseInt(prompt('Rápido, um ano:'));
+      if (y % 4 == 0) {
+        alert('BISSEXTO! :D');
+      } else {
+        alert('Só mais um ano qualquer que não é bissexto.');
+      }
+    },
+    function questao18() {},
+    function questao19() {
+      var n = parseInt(prompt('Um número menor que 1000:'));
+      var c = Math.floor(n / 100);
+      var d = Math.floor(n % 100 / 10);
+      var u = n % 10;
+      var r = '';
+      if (c > 0) {
+        r += c + ' centena' + (c > 1 ? 's' : '');
+      }
+      if (d > 0) {
+        if (r != '') {
+          r += ', ';
+        }
+        r += d + ' dezena' + (d > 1 ? 's' : '');
+      }
+      if (u > 0) {
+        if (r != '') {
+          r += ' e '
+        }
+        r += u + ' unidade' + (u > 1 ? 's' : '');
+      }
+      alert('Isso dá mais ou menos: ' + r);
+    },
+    function questao20() {
+      var n = 0;
+      for (var i = 0; i < 3; i++) {
+        n += parseFloat(prompt('Diga a nota #' + (i + 1)));
+      }
+      var m = n / 3;
+      if (m < 7) {
+        alert('Reprovado, visse.');
+      } else if (m < 10) {
+        alert('Aprovado, cumpadre!');
+      } else {
+        alert('Mas que bixinho! Aprovado com distinção.')
+      }
+    },
+    function questao21() {},
+    function questao22() {
+      var x = parseInt(prompt('Diz um numéro:'));
+      alert(x % 2 == 0 ? 'Parece um par!' : 'Ímpar, na certa.');
+    },
+    function questao23() {
+      var x = parseFloat(prompt('Diz um numéro:'));
+      alert(Math.round(x, 0) == x ? 'Parece um inteiro!' : 'Claramente um decimal.');
+    },
+    function questao24() {},
+    function questao25() {
+      var q = [
+        'Telefonou para vítima?',
+        'Esteve no local do crime?',
+        'Mora perto da vítima?',
+        'Devia para a vítima?',
+        'Já trabalhou com a vítima?'
+      ];
+      var y = 0;
+      alert('Sente-se, vamos conversar!');
+      for (var i = 0; i < q.length; i++) {
+        if (confirm(q[i])) {
+          y += 1;
+        }
+      }
+      if (y < 2) {
+        alert('Tudo bem, você parece inocente!');
+      } else if (y < 3) {
+        alert('Um pouco suspeito. Não saia da cidade, por favor.');
+      } else if (y <= 4) {
+        alert('Você é o cúmplice! Onde está seu parceiro?');
+      } else {
+        alert('SEU ASSASSINO! :O');
+      }
+    },
+    function questao26() {},
+    function questao27() {},
+    function questao28() {},
   ];
 
   return {
