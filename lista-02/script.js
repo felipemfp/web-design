@@ -167,11 +167,32 @@ var lista2 = (function() {
         '\nSendo assim, o novo salário é: R$ ' + (s + s * (a / 100))
       );
     },
-    function questao12() {},
+    function questao12() {
+      var h = parseFloat(prompt('Parceiro, quanto vale tua hora hoje?'));
+      var d = parseInt(prompt('Quantas horas por mês tu trabalha?'));
+      var b = h * d;
+      var ir = b <= 900 ? 0 : b <= 1500 ? 5 : b <= 2500 ? 10 : 20;
+      var inss = 10;
+      var fgts = 11;
+      var r = 'Salário Bruto: (' + h + ') * (' + d + '): R$ ' + Math.round(b, 2);
+      var ir_d = Math.round(b * (ir / 100), 2);
+      r += '\n(-) IR (' + ir + '%): R$ ' + ir_d;
+      var l = b - ir_d
+      var inss_d = Math.round(b * (inss / 100), 2);
+      r += '\n(-) INSS (10%): R$ ' + inss_d;
+      l -= inss_d;
+      r += '\nFGTS (11%): R$ ' + Math.round(b * (fgts / 1000), 2);
+      r += '\nTotal de Descontos: R$ ' + (ir_d + inss_d);
+      r += '\nSalário Líquido: R$ ' + l;
+      alert(r);
+    },
     function questao13() {
       var o = parseInt(prompt('Digaí um número que eu digo o dia da semana'));
       if (1 <= o && o <= 7) {
-        var d = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
+        var d = [
+          'Domingo', 'Segunda', 'Terça',
+          'Quarta', 'Quinta', 'Sexta', 'Sábado'
+        ];
         alert('Fácil, fácil: ' + d[o - 1]);
       } else {
         alert('INVÁLIDO! Se não quer brincar, não brinca.');
@@ -196,7 +217,32 @@ var lista2 = (function() {
         alert('Dá um triângulo não, visse!');
       }
     },
-    function questao16() {},
+    function questao16() {
+      var n1 = parseFloat(prompt('Diz a primeira nota:'));
+      var n2 = parseFloat(prompt('Diz a segunda nota:'));
+      var m = (n1 + n2) / 2;
+      var c = 'E';
+      if (m < 4) {
+        c = 'E'
+      } else if (m < 6) {
+        c = 'D'
+      } else if (m < 7.5) {
+        c = 'C'
+      } else if (m < 9) {
+        c = 'B'
+      } else {
+        c = 'A'
+      }
+      switch (c) {
+        case 'A':
+        case 'B':
+        case 'C':
+          alert('Tá aprovado, rapá!');
+          break;
+        default:
+          alert('Deu ruim para tu, tás reprovado.')
+      }
+    },
     function questao17() {
       var y = parseInt(prompt('Rápido, um ano:'));
       if (y % 4 == 0) {
@@ -245,11 +291,11 @@ var lista2 = (function() {
     },
     function questao21() {},
     function questao22() {
-      var x = parseInt(prompt('Diz um numéro:'));
+      var x = parseInt(prompt('Diz um número:'));
       alert(x % 2 == 0 ? 'Parece um par!' : 'Ímpar, na certa.');
     },
     function questao23() {
-      var x = parseFloat(prompt('Diz um numéro:'));
+      var x = parseFloat(prompt('Diz um número:'));
       alert(Math.round(x, 0) == x ? 'Parece um inteiro!' : 'Claramente um decimal.');
     },
     function questao24() {},
