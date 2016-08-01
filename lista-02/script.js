@@ -198,26 +198,7 @@ var lista2 = (function() {
         alert('INVÁLIDO! Se não quer brincar, não brinca.');
       }
     },
-    function questao14() {},
-    function questao15() {
-      var l = [];
-      alert('Vou pedir três lados de um triângulo, viu?');
-      for (var i = 0; i < 3; i++) {
-        l[i] = parseFloat(prompt('Digite aí um lado do triângulo'));
-      }
-      if (l[0] < l[1] + l[2] && l[2] < l[1] + l[0] && l[1] < l[0] + l[2]) {
-        if (l[0] === l[1] && l[2] === l[1]) {
-          alert('Esse bagulho dá um equilátero!');
-        } else if (l[0] === l[1] || l[2] === l[1] || l[0] === l[2]) {
-          alert('Aposto num isósceles!');
-        } else {
-          alert('Escaleno neles!');
-        }
-      } else {
-        alert('Dá um triângulo não, visse!');
-      }
-    },
-    function questao16() {
+    function questao14() {
       var n1 = parseFloat(prompt('Diz a primeira nota:'));
       var n2 = parseFloat(prompt('Diz a segunda nota:'));
       var m = (n1 + n2) / 2;
@@ -243,6 +224,27 @@ var lista2 = (function() {
           alert('Deu ruim para tu, tás reprovado.')
       }
     },
+    function questao15() {
+      var l = [];
+      alert('Vou pedir três lados de um triângulo, viu?');
+      for (var i = 0; i < 3; i++) {
+        l[i] = parseFloat(prompt('Digite aí um lado do triângulo'));
+      }
+      if (l[0] < l[1] + l[2] && l[2] < l[1] + l[0] && l[1] < l[0] + l[2]) {
+        if (l[0] === l[1] && l[2] === l[1]) {
+          alert('Esse bagulho dá um equilátero!');
+        } else if (l[0] === l[1] || l[2] === l[1] || l[0] === l[2]) {
+          alert('Aposto num isósceles!');
+        } else {
+          alert('Escaleno neles!');
+        }
+      } else {
+        alert('Dá um triângulo não, visse!');
+      }
+    },
+    function questao16() {
+
+    },
     function questao17() {
       var y = parseInt(prompt('Rápido, um ano:'));
       if (y % 4 == 0) {
@@ -251,7 +253,22 @@ var lista2 = (function() {
         alert('Só mais um ano qualquer que não é bissexto.');
       }
     },
-    function questao18() {},
+    function questao18() {
+      var c = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+      var din = prompt('Que dia, rapá?').split('/');
+      var d = parseInt(din[0]),
+        m = parseInt(din[1]),
+        y = parseInt(din[2]);
+
+      if (1 <= m && m <= 12 && 0 < d && typeof y === 'number') {
+        if (c[m - 1] >= d || (y % 4 === 0 && m === 2 && d === 29)) {
+          alert('É uma data de verdade, ahoy!');
+          return;
+        }
+      }
+
+      alert('Não parece uma data para mim!');
+    },
     function questao19() {
       var n = parseInt(prompt('Um número menor que 1000:'));
       var c = Math.floor(n / 100);
