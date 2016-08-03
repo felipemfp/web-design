@@ -243,7 +243,31 @@ var lista2 = (function() {
       }
     },
     function questao16() {
+      var a = parseFloat(prompt('Qualé o valor de a:'));
+      var b, c, delta, x1, x2;
 
+      if (a == 0) {
+        alert('Isso não é uma função do 2º grau');
+      } else {
+        b = parseFloat(prompt('Qualé o valor de b:'));
+        c = parseFloat(prompt('Qualé o valor de c:'));
+
+        delta = (b ** 2) - 4 * a * c;
+
+        if (delta < 0) {
+          alert('Tem raíz não, visse!');
+        } else if (delta > 0) {
+          let p1 = (-1 * b);
+          let p2 = (Math.sqrt(delta));
+          let p3 = (2 * a);
+          x1 = (p1 - p2) / p3;
+          x2 = (p1 + p2) / p3;
+          alert('Encontrei duas raízes: ' + x1 + ' e ' + x2);
+        } else {
+          x1 = (-1 * b) / (2 * a);
+          alert('Só achei essa raíz para a equação: ' + x1);
+        }
+      }
     },
     function questao17() {
       var y = parseInt(prompt('Rápido, um ano:'));
@@ -306,7 +330,19 @@ var lista2 = (function() {
         alert('Mas que bixinho! Aprovado com distinção.')
       }
     },
-    function questao21() {},
+    function questao21() {
+      var x = parseInt(prompt('Quanto tu quer sacar, mano?'));
+      var d = [100, 50, 10, 5, 1];
+      var r = 'Vou te dar:\n\n';
+      d.forEach(function(m) {
+        if (x >= m) {
+          let n = Math.floor(x / m)
+          x = x - (n * m)
+          r += n + ' nota(s) de R$ ' + m + '\n';
+        }
+      });
+      alert(r.trim());
+    },
     function questao22() {
       var x = parseInt(prompt('Diz um número:'));
       alert(x % 2 == 0 ? 'Parece um par!' : 'Ímpar, na certa.');
@@ -315,7 +351,42 @@ var lista2 = (function() {
       var x = parseFloat(prompt('Diz um número:'));
       alert(Math.round(x, 0) == x ? 'Parece um inteiro!' : 'Claramente um decimal.');
     },
-    function questao24() {},
+    function questao24() {
+      var n1 = parseFloat(prompt('Primeiro, o número n1:'));
+      var n2 = parseFloat(prompt('Agora o n2:'));
+      var op = prompt('Por último, qual a operação? (+, -, *, /):').replace(/[^\+\*\/\-]/g, '');
+      var r = 'O resultado é: ';
+      var n;
+      if (op === '+') {
+        n = n1 + n2;
+      } else if (op === '-') {
+        n = n1 - n2;
+      } else if (op === '*') {
+        n = n1 * n2;
+      } else if (op === '/') {
+        n = n1 / n2;
+      }
+      r += n;
+      r += '\nE posso dizer que é ';
+      if (n % 2 == 0) {
+        r += 'par';
+      } else {
+        r += 'ímpar';
+      }
+      r += ', ';
+      if (n >= 0) {
+        r += 'positivo';
+      } else {
+        r += 'negativo';
+      }
+      r += ' e ';
+      if (Math.round(n) == n) {
+        r += 'inteiro!';
+      } else {
+        r += 'decimal!';
+      }
+      alert(r);
+    },
     function questao25() {
       var q = [
         'Telefonou para vítima?',
@@ -346,7 +417,20 @@ var lista2 = (function() {
     function questao28() {},
   ];
 
+  function init() {
+    var els = document.querySelectorAll('ul.questoes li');
+
+    els.forEach(function(el) {
+      el.addEventListener('click', function() {
+        let ind = parseInt(this.innerText.replace(/\D/g, '')) - 1;
+        q[ind]();
+      });
+    });
+  }
+
   return {
-    questoes: q
+    init: init
   }
 })();
+
+lista2.init();

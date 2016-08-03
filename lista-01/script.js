@@ -180,7 +180,21 @@ var lista1 = (function() {
 
   ];
 
+
+  function init() {
+    var els = document.querySelectorAll('ul.questoes li');
+
+    els.forEach(function(el) {
+      el.addEventListener('click', function() {
+        let ind = parseInt(this.innerText.replace(/\D/g, '')) - 1;
+        q[ind]();
+      });
+    });
+  }
+
   return {
-    questoes: q
+    init: init
   }
 })();
+
+lista1.init();
