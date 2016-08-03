@@ -313,6 +313,8 @@ var lista2 = (function() {
           r += ' e '
         }
         r += u + ' unidade' + (u > 1 ? 's' : '');
+      } else {
+        r = r.replace(', ', ' e ');
       }
       alert('Isso dá mais ou menos: ' + r);
     },
