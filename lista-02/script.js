@@ -414,8 +414,37 @@ var lista2 = (function() {
         alert('SEU ASSASSINO! :O');
       }
     },
-    function questao26() {},
-    function questao27() {},
+    function questao26() {
+      var l = parseFloat(prompt('Quantos litros foi:'));
+      var c = prompt('Qualé o combustível? (A/G)').toUpperCase()[0];
+      var x = {
+        'A': [1.90, 3, 5],
+        'G': [2.50, 4, 6]
+      };
+      if (x.hasOwnProperty(c)) {
+        var p = l * x[c][0];
+        var d = l <= 20 ? 1 : 2;
+        p -= x[c][d] / 100 * p;
+        alert('Rapaz, saiu por R$ ' + p);
+      } else {
+        alert('Por essa não esperava! "' + c + '"?');
+      }
+    },
+    function questao27() {
+      var mrg = parseFloat(prompt('Tu comprou quantos Kg de morango?'));
+      var mca = parseFloat(prompt('E de maça?'));
+      var p = 0;
+      var k = mrg + mca;
+
+      p += mrg * (mrg > 5 ? 2.2 : 2.5);
+      p += mca * (mca > 5 ? 1.5 : 1.8);
+
+      if (k > 8 || p > 25) {
+        p -= p * 0.1;
+      }
+
+      alert('Ficou R$ ' + p);
+    },
     function questao28() {},
   ];
 
